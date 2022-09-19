@@ -40,6 +40,7 @@ function Assets() {
 	useEffect(() => {
 		setInterval(getAllAssets, 3000);
 	}, []);
+	console.log("repeat every 2sec==========>", assets);
 
 	const getAllAssets = async () => {
 		try {
