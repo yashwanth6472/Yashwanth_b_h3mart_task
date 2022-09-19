@@ -13,15 +13,12 @@ import {
 } from "@mui/material";
 import "../Styles/Assests.css";
 import { useDispatch, useSelector } from "react-redux";
-import assetsState from "../hooks/assetsState";
-import { setAssets } from "../Store/actions/assets";
 import ButtonContained from "./ButtonContained";
-
+import { getAssetFetch } from "../Store/actions/assets";
 function Assets() {
-	const { fetchAllAssests } = assetsState();
-	let { assets } = useSelector((state) => state.assets);
+	let assets = useSelector((state) => state.assetReducer.assets);
 	const dispatch = useDispatch();
-
+	console.log(assets);
 	const [windowWidth, setwindowWidth] = useState(window.innerWidth);
 	const [toggleAsset, setToggleAsset] = useState(true);
 	assets = toggleAsset ? assets.slice(0, 50) : assets.slice(0, 100);
@@ -46,8 +43,7 @@ function Assets() {
 
 	const getAllAssets = async () => {
 		try {
-			const resp = await fetchAllAssests();
-			dispatch(setAssets(resp.data.data));
+			dispatch(getAssetFetch());
 		} catch (err) {
 			console.log(err);
 		}

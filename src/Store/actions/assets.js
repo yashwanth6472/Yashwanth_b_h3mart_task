@@ -1,8 +1,8 @@
-export const FETCH_ALL_ASSETS = "FETCH_ALL_ASSETS";
-
-export const setAssets = (assets) => {
+export const GET_ASSET_FETCH = "GET_ASSET_FETCH";
+export const GET_ASSET_SUCCESS = "GET_USERS_SUCCESS";
+export const getAssetFetch = (assets) => {
 	return {
-		type: FETCH_ALL_ASSETS,
+		type: GET_ASSET_FETCH,
 		payload: assets,
 	};
 };

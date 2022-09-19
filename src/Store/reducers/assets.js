@@ -1,4 +1,4 @@
-import { FETCH_ALL_ASSETS } from "../actions/assets";
+import { GET_ASSET_FETCH, GET_ASSET_SUCCESS } from "../actions/assets";
 
 const initialState = {
 	assets: [],
@@ -6,8 +6,8 @@ const initialState = {
 
 const assetReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case FETCH_ALL_ASSETS:
-			return { ...state, assets: action.payload };
+		case GET_ASSET_SUCCESS:
+			return { ...state, assets: action.asset };
 
 		default:
 			return state;
