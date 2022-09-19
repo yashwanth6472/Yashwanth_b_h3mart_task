@@ -1,0 +1,29 @@
+.footer-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background: linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246))
+		rgb(255, 255, 255) !important;
+	background-image: linear-gradient(
+		to right,
+		rgb(63, 81, 181),
+		rgb(100, 181, 246)
+	);
+	color: lightblue;
+	padding: 1rem 6rem 1rem 16rem;
+}
+.list-header {
+	font-size: 18px;
+	font-weight: 600;
+	text-align: left;
+	color: #fff;
+}
+@media screen and (max-width: 1500px) {
+	.footer-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media screen and (max-width: 700px) {
+	.footer-container {
+		padding: 1rem 1rem 1rem 1rem;
+	}
+}

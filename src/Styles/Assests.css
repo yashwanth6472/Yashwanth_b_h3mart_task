@@ -1,0 +1,16 @@
+/* .tableContainer {
+	width: 80%;
+	margin: auto;
+	padding: 1rem;
+	overflow-x: hidden;
+	z-index: 1;
+	background-color: #fff;
+	margin-top: 7%;
+}
+.table-head {
+	background-color: #f8f8f8;
+} */
+.table-rows:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+}
